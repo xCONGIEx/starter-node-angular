@@ -73,7 +73,7 @@ function updateRemoteApp() {
 // restart mongodb and node services on the remote server
 function restartRemoteServices() {
   return ssh.execCommand(
-    'cd starter-node-angular && npm install && sudo service mongod start && pm2 start app.js', {
+    'cd starter-node-angular && npm install && sudo service mongod start && pm2 start server.js', {
       cwd: '/home/ubuntu'
   });
 }
